@@ -40,3 +40,24 @@ docker stop <CONTAINER-ID>
 docker start <CONTAINER-ID>
 
 ```
+
+# Stop all running containers
+
+```
+docker stop $(docker ps -q)
+
+```
+
+# Remove all containers
+
+```
+docker rm -f $(docker ps -a -q)
+
+```
+
+# Remove all containers, images, networks, and volumes in one go
+
+```
+docker system prune -af
+
+```
