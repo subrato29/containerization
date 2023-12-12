@@ -11,6 +11,8 @@ Run `docker build .`
 ```
 docker ps
 
+`ps` stands for processes i.r. containers
+
 ```
 
 ## How many docker `running` & `non-running` containers available in the system
@@ -59,5 +61,13 @@ docker rm -f $(docker ps -a -q)
 
 ```
 docker system prune -af
+
+```
+
+# How to run a docker image
+
+```
+docker run -it -d <IMAGE>
+e.g. docker run -it -d ubuntu
 
 ```
