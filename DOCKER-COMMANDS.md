@@ -101,4 +101,35 @@ docker run -p <LOCAL_MACHINE_PORT>:<DOCKER_CONTAINER_PORT> <IMAGE_ID>
 e.g.
 docker run -p 3000:80 <IMAGE_ID>
 
+docker run -p <LOCAL_MACHINE_PORT>:<DOCKER_CONTAINER_PORT> -d <IMAGE_ID>
+
+```
+
+# How to run a Docker in `attach` and `detached` mode
+
+```
+- attach mode
+docker run -p <LOCAL_MACHINE_PORT>:<DOCKER_CONTAINER_PORT> <IMAGE_ID>
+e.g.
+docker run -p 3000:80 <IMAGE_ID>
+
+OR
+docker attach <NAME OR CONTAINER-ID>
+
+OR
+docker start -a <NAME OR CONTAINER-ID>
+
+- detached mode
+docker run -p <LOCAL_MACHINE_PORT>:<DOCKER_CONTAINER_PORT> -d <IMAGE_ID> (mention -d)
+e.g.
+docker run -p 3000:80 -d <IMAGE_ID>
+
+
+```
+
+## To show all docker images
+
+```
+docker images
+
 ```
