@@ -11,7 +11,7 @@ Run `docker build .`
 ```
 docker ps
 
-`ps` stands for processes i.r. containers
+`ps` stands for processes i.e. containers
 
 ```
 
@@ -69,5 +69,36 @@ docker system prune -af
 ```
 docker run -it -d <IMAGE>
 e.g. docker run -it -d ubuntu
+
+```
+
+# Deletion of an image
+
+```
+docker rmi <image_id>
+
+```
+
+# Forceful deletion of an image
+
+```
+First use the docker rm command to remove the stopped container.
+docker rm <CONTAINER_ID>
+
+Force deletion of image
+docker rmi -f <IMAGE_ID>
+
+```
+
+# How to run a `Dockerfile`
+
+```
+Go to the directory where Dockerfile exist and then run below command
+docker build .
+
+And then run below command
+docker run -p <LOCAL_MACHINE_PORT>:<DOCKER_CONTAINER_PORT> <IMAGE_ID>
+e.g.
+docker run -p 3000:80 <IMAGE_ID>
 
 ```
