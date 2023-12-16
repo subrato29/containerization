@@ -45,6 +45,20 @@ docker start <CONTAINER-ID>
 
 ```
 
+## How to start a docker container in an attached mode
+
+```
+docker start -a <CONTAINER-ID OR CONTAINER-NAME>
+
+```
+
+## How to start a docker container in an attached and interactive mode
+
+```
+docker start -a i <CONTAINER-ID OR CONTAINER-NAME>
+
+```
+
 ## Stop all running containers
 
 ```
@@ -66,11 +80,11 @@ docker system prune -af
 
 ```
 
-## How to run a docker image
+## How to run a docker image in interactive mode
 
 ```
-docker run -it -d <IMAGE>
-e.g. docker run -it -d ubuntu
+docker run -it <IMAGE>
+e.g. docker run -it ubuntu
 
 ```
 
