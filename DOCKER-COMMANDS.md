@@ -88,10 +88,34 @@ e.g. docker run -it ubuntu
 
 ```
 
+## Deletion of a container
+
+```
+docker rm <CONTAINER_ID or CONTAINER_NAME>
+
+```
+
 ## Deletion of an image
 
 ```
-docker rmi <image_id>
+docker rmi <IMAGE_ID>
+
+Note: If you have container that has been stopped and is used by an image, then the container needs to be removed first and then remove the the image
+
+```
+
+## Deletion of all unused images
+
+```
+docker image prune
+
+```
+
+## Deletion of a running container
+
+```
+docker stop <CONTAINER_ID or CONTAINER_NAME>
+docker rm <CONTAINER_ID or CONTAINER_NAME>
 
 ```
 
@@ -99,7 +123,7 @@ docker rmi <image_id>
 
 ```
 First use the docker rm command to remove the stopped container.
-docker rm <CONTAINER_ID>
+docker rm <CONTAINER_ID OR CONTAINER_NAME>
 
 Force deletion of image
 docker rmi -f <IMAGE_ID>
