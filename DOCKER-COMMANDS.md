@@ -183,3 +183,10 @@ Note: Need to add `--rm`
 
 
 ```
+
+## How to see image details
+
+```
+docker inspect <IMAGE_ID>
+
+```
