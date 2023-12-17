@@ -173,3 +173,13 @@ docker run -p 3000:80 -d <IMAGE_ID>
 docker images
 
 ```
+
+## Running a docker image and once stop the container, it would automatically delete the running container
+
+```
+docker run -p <LOCAL_MACHINE_PORT>:<DOCKER_CONTAINER_PORT> -d --rm <IMAGE_ID>
+
+Note: Need to add `--rm`
+
+
+```
