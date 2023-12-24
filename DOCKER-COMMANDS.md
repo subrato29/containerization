@@ -6,6 +6,8 @@
 Go to the directory
 Run `docker build .`
 
+Note: The command `docker build .` is used to build a Docker image from the Dockerfile located in the current directory (.).
+
 ```
 
 ## How many docker `running` containers available in the system
@@ -188,5 +190,30 @@ Note: Need to add `--rm`
 
 ```
 docker inspect <IMAGE_ID>
+
+```
+
+## Giving custom name of the container
+
+```
+Need to add [ --name <CONTAINER_CUSTOM_NAME> ]
+
+e.g.
+docker run -p 3000:80 -d --rm --name <CONTAINER_CUSTOM_NAME> <IMAGE_ID>
+docker run -p 3000:80 -d --rm --name goalapp 2af217f69d17
+
+```
+
+## Giving custom name of the image while runing `Dockerfile`
+
+```
+docker build -t <CUSTOM_IMAGE_NAME>:<CUSTOM_TAG_NAME> .
+
+e.g.
+docker build -t goal:latest .
+
+Then you can run your app by custom image name. E.g.
+docker run -p 3000:80 -d --rm --name <CONTAINER_CUSTOM_NAME> <CUSTOM_IMAGE_NAME>:<CUSTOM_TAG_NAME>
+docker run -p 3000:80 -d --rm --name goalapp goal:latest
 
 ```
